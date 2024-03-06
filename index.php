@@ -82,28 +82,19 @@
             </div>
 
             <!-- FORMULARIO RET -->
-            <form method="post">
+            <form action="calculo.php" method="post">
                 <div class="input-block">
                     <label for="altura-ret">Altura (h)</label>
-                    <input type="text" name="altura-ret" placeholder="Insira a altura aqui">
+                    <input type="text" name="alturaret" placeholder="Insira a altura aqui">
                 </div>
                 <div class="input-block">
                     <label for="base-ret">Base (b)</label>
-                    <input type="text" name="base-ret" placeholder="Insira a medida da base aqui">
+                    <input type="text" name="baseret" placeholder="Insira a medida da base aqui">
                 </div>
 
                 <input type="submit" value="Calcular perímetro" name="calcRetangulo" class="btn">
             </form>
-            <?php
-            if (isset($_POST['altura-ret'])) {
-                $alturaRet = (float) $_POST['altura-ret'];
-                $baseRet = (float) $_POST['base-ret'];
-                $areaR = 2 * ($alturaRet + $baseRet);
-
-                echo "<h2>A área do retangulo é:</h2>";
-                echo "<p>$areaR</p>";
-            }
-            ?>
+           
         </div>
     </div>
 
@@ -123,25 +114,16 @@
             </div>
 
             <!-- FORMULARIO QUAD -->
-            <form method="post">
+            <form action="calculo.php" method="post">
                 <div class="input-block">
                     <label for="altura-qua">Altura (a)</label>
-                    <input type="text" name="altura-qua" placeholder="Insira a altura aqui">
+                    <input type="text" name="alturaqua" placeholder="Insira a altura aqui">
                 </div>
 
                 <input type="submit" value="Calcular perímetro" name="calcQuadrado" class="btn">
 
 
             </form>
-            <?php
-            if (isset($_POST['altura-qua'])) {
-                $alturaQua = (float) $_POST['altura-qua'];
-                $areaQ = $alturaQua * 4;
-
-                echo "<h2>A área do quadrado é:</h2>";
-                echo "<p>$areaQ</p>";
-            }
-            ?>
         </div>
     </div>
 
@@ -161,30 +143,18 @@
             </div>
 
             <!-- FORMULARIO PARALELO -->
-            <form method="post">
+            <form action="calculo.php" method="post">
                 <div class="input-block">
                     <label for="lado-paralelo">Lado (a)</label>
-                    <input type="text" name="lado-paralelo" placeholder="Insira a medida do lado aqui">
+                    <input type="text" name="ladoparalelo" placeholder="Insira a medida do lado aqui">
                 </div>
                 <div class="input-block">
                     <label for="base-paralelo">Base (b)</label>
-                    <input type="text" name="base-paralelo" placeholder="Insira a medida da base aqui">
+                    <input type="text" name="baseparalelo" placeholder="Insira a medida da base aqui">
                 </div>
 
                 <input type="submit" value="Calcular perímetro" name="calcParalelo" class="btn">
             </form>
-
-            <?php
-            if (isset($_POST['lado-paralelo'])) {
-                $ladoPa = (float) $_POST['lado-paralelo'];
-                $basePa = (float) $_POST['base-paralelo'];
-                $areaP = 2 * ($ladoPa + $basePa);
-
-                echo "<h2>O perímetro do paralelo é:</h2>";
-                echo "<p>$areaP</p>";
-            }
-            ?>
-
         </div>
     </div>
 
@@ -204,39 +174,26 @@
             </div>
 
             <!-- FORMULARIO TRAPEZIO -->
-            <form method="post">
+            <form action="calculo.php" method="post">
                 <div class="input-block">
                     <label for="lado-a-trap">Lado (a)</label>
-                    <input type="text" name="lado-a-trap" placeholder="Insira a medida do lado 'a' aqui">
+                    <input type="text" name="ladoatrap" placeholder="Insira a medida do lado 'a' aqui">
                 </div>
                 <div class="input-block">
                     <label for="lado-b-paralelo">Lado (b)</label>
-                    <input type="text" name="lado-b-trap" placeholder="Insira a medida do lado 'b' aqui">
+                    <input type="text" name="ladobtrap" placeholder="Insira a medida do lado 'b' aqui">
                 </div>
                 <div class="input-block">
                     <label for="lado-c-paralelo">Lado (c)</label>
-                    <input type="text" name="lado-c-trap" placeholder="Insira a medida do lado 'c' aqui">
+                    <input type="text" name="ladoctrap" placeholder="Insira a medida do lado 'c' aqui">
                 </div>
                 <div class="input-block">
                     <label for="base-b-paralelo">Base (B)</label>
-                    <input type="text" name="base-b-trap" placeholder="Insira a medida da base 'B' aqui">
+                    <input type="text" name="basebtrap" placeholder="Insira a medida da base 'B' aqui">
                 </div>
 
                 <input type="submit" value="Calcular perímetro" name="calcTrapezio" class="btn">
             </form>
-            <?php
-            if (isset($_POST['lado-a-trap'])) {
-                $ladoA = (float) $_POST['lado-a-trap'];
-                $ladob = (float) $_POST['lado-b-trap'];
-                $ladoc = (float) $_POST['lado-c-trap'];
-                $baseB = (float) $_POST['base-b-trap'];
-                $areaTra = $ladoA + $ladob + $ladoc + $baseB;
-
-                echo "<h2>O perímetro do trapezio é:</h2>";
-                echo "<p>$areaTra</p>";
-            }
-            ?>
-
         </div>
     </div>
 
